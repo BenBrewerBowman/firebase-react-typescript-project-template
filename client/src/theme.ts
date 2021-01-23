@@ -3,12 +3,16 @@ import createMuiTheme, {
 } from "@material-ui/core/styles/createMuiTheme";
 import { PaletteType } from "@material-ui/core";
 
-const PRIMARY_MAIN = "#42C8A2";
-const PRIMARY_LIGHT = "#47DCA5";
-const PRIMARY_DARK = "#008371";
-const SECONDARY_MAIN = "#004C68";
-const SECONDARY_LIGHT = "#0D6D67";
-const SECONDARY_DARK = "#003344";
+const PRIMARY_LIGHT = "#E5F9FF";
+const PRIMARY_MAIN = "#33C1EA";
+const PRIMARY_DARK = "#197FC3";
+
+const SECONDARY_LIGHT = "#35709E";
+const SECONDARY_MAIN = "#245987";
+const SECONDARY_DARK = "#2F4E8D";
+
+export const PRIMARY_GRADIENT = `linear-gradient( 135deg, ${PRIMARY_MAIN} 0%, ${PRIMARY_DARK} 50%, ${SECONDARY_LIGHT} 100%)`;
+export const SECONDARY_GRADIENT = `linear-gradient( 135deg, ${SECONDARY_LIGHT} 0%, ${SECONDARY_MAIN} 50%, ${SECONDARY_DARK} 100%)`;
 
 export const createTheme = (type: PaletteType): Theme =>
   createMuiTheme({
@@ -31,6 +35,11 @@ export const createTheme = (type: PaletteType): Theme =>
       fontFamily: ["Montserrat", "Lato", "Roboto"].join(","),
     },
     overrides: {
+      MuiButton: {
+        root: {
+          textTransform: "none",
+        },
+      },
       MuiCard: {
         root: {
           borderRadius: 8,
@@ -58,5 +67,3 @@ export const createTheme = (type: PaletteType): Theme =>
   });
 
 export type Theme = T_Theme;
-
-export const PRIMARY_GRADIENT = `linear-gradient( 135deg, ${PRIMARY_LIGHT} 0%, ${SECONDARY_LIGHT} 50%, ${SECONDARY_DARK} 100%)`;

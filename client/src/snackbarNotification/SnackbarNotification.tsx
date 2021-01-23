@@ -8,12 +8,10 @@ import {
   Theme,
   Typography,
 } from "@material-ui/core";
-import { amber, green } from "@material-ui/core/colors";
+import { amber, green, red } from "@material-ui/core/colors";
 import { TransitionProps } from "@material-ui/core/transitions/transition";
 import clsx from "clsx";
-import React from "react";
-import { AlertCircle, CheckCircle, Info, X } from "react-feather";
-import { SnackbarNotificationVariant } from "./SnackbarNotification.types";
+import { X } from "react-feather";
 import { useSnackbarNotification } from "./SnackbarNotificationContext";
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -31,22 +29,33 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     SUCCESS: {
       color: theme.palette.common.white,
-      backgroundColor: green[600],
+      backgroundColor: green[400],
     },
     ERROR: {
       color: theme.palette.common.white,
-      backgroundColor: theme.palette.error.dark,
+      backgroundColor: red[400],
     },
     message: {
       display: "flex",
-      alignItems: "center",
+      // alignItems: "center",
     },
     icon: {
-      fontSize: 28,
+      width: 28,
+      height: 28,
     },
     iconVariant: {
       opacity: 0.9,
       marginRight: theme.spacing(2),
+    },
+    closeButton: {
+      padding: theme.spacing(0.25),
+      width: theme.spacing(2.75),
+      height: theme.spacing(2.75),
+      marginLeft: theme.spacing(1),
+      marginTop: theme.spacing(0),
+    },
+    snackbarContent: {
+      padding: theme.spacing(0.75, 1, 0.75, 2),
     },
   })
 );
@@ -77,39 +86,20 @@ export const SnackbarNotification = () => {
       className={classes.root}
     >
       <SnackbarContent
-        className={classes[variant]}
+        className={clsx(classes.snackbarContent, classes[variant])}
         message={
-          <span id="alert-snackbar" className={classes.message}>
-            {
-              {
-                [SnackbarNotificationVariant.INFO]: (
-                  <Info className={clsx(classes.icon, classes.iconVariant)} />
-                ),
-                [SnackbarNotificationVariant.SUCCESS]: (
-                  <CheckCircle
-                    className={clsx(classes.icon, classes.iconVariant)}
-                  />
-                ),
-                [SnackbarNotificationVariant.WARNING]: (
-                  <AlertCircle
-                    className={clsx(classes.icon, classes.iconVariant)}
-                  />
-                ),
-                [SnackbarNotificationVariant.ERROR]: (
-                  <AlertCircle
-                    className={clsx(classes.icon, classes.iconVariant)}
-                  />
-                ),
-              }[variant]
-            }
-            <Typography variant="subtitle1">{message}</Typography>
+          <span className={classes.message}>
+            <Typography variant="body1">{message}</Typography>
+            <IconButton
+              key="close"
+              color="inherit"
+              onClick={closeNotification}
+              className={classes.closeButton}
+            >
+              <X />
+            </IconButton>
           </span>
         }
-        action={[
-          <IconButton key="close" color="inherit" onClick={closeNotification}>
-            <X />
-          </IconButton>,
-        ]}
       />
     </Snackbar>
   );

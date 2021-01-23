@@ -1,0 +1,44 @@
+{
+  "name": "functions",
+  "scripts": {
+    "lint": "tslint --project tsconfig.json",
+    "build": "tsc",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deployFunctions": "firebase deploy --only functions",
+    "deployCurrentFunction": "firebase deploy --only functions:confirmAccountPayment",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "12"
+  },
+  "main": "lib/functions/src/index.js",
+  "dependencies": {
+    "@types/cors": "^2.8.7",
+    "@types/date-fns": "^2.6.0",
+    "cors": "^2.8.5",
+    "date-fns": "^2.15.0",
+    "firebase-admin": "^8.10.0",
+    "firebase-functions": "^3.6.1",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.13",
+    "prettier": "^2.1.1"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^0.2.0",
+    "tslint": "^5.12.0",
+    "typescript": "^3.8.0"
+  },
+  "private": true,
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  }
+}

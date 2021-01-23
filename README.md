@@ -1,18 +1,35 @@
-# React Project Template
+# Firebase + React + TypeScript Project Template
 
-> Getting started w/ a new react project
+> Template for new Firebase + React + TypeScript project
 
 ## Getting started
 
-In the project directory, run:
+### Firebase
+
+Create new project in the [Firebase Console](https://console.firebase.google.com/). Add hosting, firestore, etc.
+
+### Config
+
+- Update `.firebaserc`, `.github/workflows/firebase-hosting-merge.yml`, and `.github/workflows/firebase-hosting-pull-request.yml` with your new Firebase project ID.
+
+- Update `client/src/constants.ts` with `APP_NAME` and `FIREBASE_CONFIG`.
+
+- Update `client/public/index.html` with `Title` and `Description`.
+
+- Update `client/public/manifest.json` with `short_name` and `name`.
+
+- Update `client/package.json` with `name`.
+
+## Running locally
+
+Navigate to the client directory and install all dependencies:
 
 ##### `yarn install`
 
-Installs all dependencies
+Start the app in development mode:
 
 ##### `yarn start`
 
-Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.\
@@ -50,7 +67,7 @@ Runs linter to find potential problems in code
 
 ##### `yarn format`
 
-Formats any and all code to consistent spec
+Formats any and all code to formatter rules
 
 ##### `yarn deploy`
 

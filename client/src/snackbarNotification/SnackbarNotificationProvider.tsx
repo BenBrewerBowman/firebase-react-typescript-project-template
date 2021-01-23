@@ -44,11 +44,11 @@ export const SnackbarNotificationProvider = ({
         info: (message) =>
           showNotification(SnackbarNotificationVariant.INFO, message),
         success: (message) =>
-          showNotification(SnackbarNotificationVariant.INFO, message),
+          showNotification(SnackbarNotificationVariant.SUCCESS, message),
         warning: (message) =>
-          showNotification(SnackbarNotificationVariant.INFO, message),
+          showNotification(SnackbarNotificationVariant.WARNING, message),
         error: (message) =>
-          showNotification(SnackbarNotificationVariant.INFO, message),
+          showNotification(SnackbarNotificationVariant.ERROR, message),
         closeNotification,
       }}
     >

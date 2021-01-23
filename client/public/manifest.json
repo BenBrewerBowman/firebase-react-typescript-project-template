@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "New Project Template",
+  "name": "Firebase React Typescript Project Template",
   "icons": [
     {
       "src": "favicon.ico",

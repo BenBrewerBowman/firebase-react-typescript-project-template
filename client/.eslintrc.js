@@ -43,6 +43,8 @@ module.exports = {
     "import/order": "off",
     "react/jsx-props-no-spreading": "off",
     "import/no-unresolved": "off",
+    "prefer-destructuring": "off",
+    "@typescript-eslint/no-shadow": "off",
     "prettier/prettier": [
       "error",
       {
