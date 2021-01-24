@@ -1,4 +1,4 @@
-import { CssBaseline, ThemeProvider, Typography } from "@material-ui/core";
+import { CssBaseline, ThemeProvider } from "@material-ui/core";
 import { SnackbarNotificationProvider } from "./snackbarNotification";
 import { createTheme } from "./theme";
 import {
@@ -20,6 +20,7 @@ import { SessionProvider } from "./auth/useSession";
 import firebase from "firebase";
 import AuthAction from "./auth/authActions/AuthAction";
 import { Suspense } from "react";
+import LandingPage from "./landing/LandingPage";
 
 // init firebase
 const firebaseApp = firebase.initializeApp(FIREBASE_CONFIG);
@@ -45,7 +46,7 @@ const App = (): JSX.Element => {
                   <AuthAction />
                 </Route>
                 <PrivateRoute path={APP_LANDING}>
-                  <Typography variant="h3">You&#39;re authed!</Typography>
+                  <LandingPage />
                 </PrivateRoute>
                 <Redirect to={APP_LANDING} />
               </Switch>
