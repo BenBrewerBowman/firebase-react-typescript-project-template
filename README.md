@@ -1,6 +1,6 @@
 # Firebase + React + TypeScript Project Template
 
-> Template for new Firebase + React + TypeScript project
+> Template for new Firebase + React + TypeScript project. View the demo [here](https://frt-project-template.firebaseapp.com/).
 
 ## Getting started
 
