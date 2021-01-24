@@ -1,6 +1,6 @@
 # Firebase + React + TypeScript Project Template
 
-> Template for new Firebase + React + TypeScript project
+> Template for new Firebase + React + TypeScript project. View the demo [here](https://frt-project-template.firebaseapp.com/).
 
 ## Getting started
 
@@ -8,11 +8,11 @@
 
 1. Create new project in the [Firebase Console](https://console.firebase.google.com/).
 
-2. Enable Email + Google Auth to project.
+2. Enable Email + Google Authentication for project.
 
-3. Update auth template action url to: `https://DOMAIN.firebaseapp.com/auth-action`
+3. Update authentication template action url to: `https://<YOUR_DOMAIN_HERE>.firebaseapp.com/auth-action`.
 
-4. Enable hosting for project
+4. Enable hosting for project.
 
 ### Config
 
