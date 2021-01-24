@@ -36,8 +36,11 @@ const useStyles = makeStyles((theme: Theme) =>
       backgroundColor: red[400],
     },
     message: {
+      width: "100%",
       display: "flex",
-      // alignItems: "center",
+    },
+    messageText: {
+      marginRight: theme.spacing(1),
     },
     icon: {
       width: 28,
@@ -51,7 +54,7 @@ const useStyles = makeStyles((theme: Theme) =>
       padding: theme.spacing(0.25),
       width: theme.spacing(2.75),
       height: theme.spacing(2.75),
-      marginLeft: theme.spacing(1),
+      marginLeft: "auto",
       marginTop: theme.spacing(0),
     },
     snackbarContent: {
@@ -86,10 +89,15 @@ export const SnackbarNotification = () => {
       className={classes.root}
     >
       <SnackbarContent
-        className={clsx(classes.snackbarContent, classes[variant])}
+        classes={{
+          root: clsx(classes.snackbarContent, classes[variant]),
+          message: classes.message,
+        }}
         message={
-          <span className={classes.message}>
-            <Typography variant="body1">{message}</Typography>
+          <>
+            <Typography variant="body1" className={classes.messageText}>
+              {message}
+            </Typography>
             <IconButton
               key="close"
               color="inherit"
@@ -98,7 +106,7 @@ export const SnackbarNotification = () => {
             >
               <X />
             </IconButton>
-          </span>
+          </>
         }
       />
     </Snackbar>
