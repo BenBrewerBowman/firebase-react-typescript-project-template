@@ -10,9 +10,9 @@
 
 2. Enable Email + Google Auth to project.
 
-3. Update auth template action url to: `https://DOMAIN.firebaseapp.com/auth-action`
+3. Update auth template action url to: `https://DOMAIN.firebaseapp.com/auth-action`.
 
-4. Enable hosting for project
+4. Enable hosting for project.
 
 ### Config
 
