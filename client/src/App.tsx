@@ -1,4 +1,4 @@
-import { CssBaseline, ThemeProvider } from "@material-ui/core";
+import { CssBaseline, ThemeProvider, Typography } from "@material-ui/core";
 import { SnackbarNotificationProvider } from "./snackbarNotification";
 import { createTheme } from "./theme";
 import {
@@ -45,7 +45,7 @@ const App = (): JSX.Element => {
                   <AuthAction />
                 </Route>
                 <PrivateRoute path={APP_LANDING}>
-                  <div>Landing</div>
+                  <Typography variant="h3">You&#39;re authed!</Typography>
                 </PrivateRoute>
                 <Redirect to={APP_LANDING} />
               </Switch>

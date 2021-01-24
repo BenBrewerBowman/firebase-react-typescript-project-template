@@ -31,7 +31,7 @@
     "eject": "react-scripts eject",
     "format": "prettier --write src/**/*.ts{,x}",
     "lint": "tsc --noEmit && eslint src/**/*.ts{,x}",
-    "deploy": "yarn build; firebase deploy"
+    "deploy": "yarn build; firebase deploy --only hosting"
   },
   "husky": {
     "hooks": {

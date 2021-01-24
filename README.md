@@ -6,11 +6,17 @@
 
 ### Firebase
 
-Create new project in the [Firebase Console](https://console.firebase.google.com/). Add hosting, firestore, etc.
+1. Create new project in the [Firebase Console](https://console.firebase.google.com/).
+
+2. Enable Email + Google Auth to project.
+
+3. Update auth template action url to: `https://DOMAIN.firebaseapp.com/auth-action`
+
+4. Enable hosting for project
 
 ### Config
 
-- Update `.firebaserc`, `.github/workflows/firebase-hosting-merge.yml`, and `.github/workflows/firebase-hosting-pull-request.yml` with your new Firebase project ID.
+- Update `.firebaserc` with your new Firebase project ID.
 
 - Update `client/src/constants.ts` with `APP_NAME` and `FIREBASE_CONFIG`.
 

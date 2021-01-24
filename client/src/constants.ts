@@ -1,4 +1,4 @@
-export const APP_NAME = "My App Name";
+export const APP_NAME = "FireReactTS";
 
 // auth routes
 export const SIGNUP_ROUTE = "/signup";
@@ -11,5 +11,11 @@ export const AUTH_ACTION_PATH = "/auth-action";
 export const APP_LANDING = "/";
 
 export const FIREBASE_CONFIG = {
-  // config goes here
+  apiKey: "AIzaSyDRZ440b25PgXyhFg22AoJj79T7qVonDqA",
+  authDomain: "frt-project-template.firebaseapp.com",
+  projectId: "frt-project-template",
+  storageBucket: "frt-project-template.appspot.com",
+  messagingSenderId: "987168014273",
+  appId: "1:987168014273:web:af5565313778fb5167b940",
+  measurementId: "G-99E3H21ZM3",
 };

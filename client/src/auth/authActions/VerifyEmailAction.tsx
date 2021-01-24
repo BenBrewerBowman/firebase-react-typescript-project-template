@@ -2,10 +2,10 @@ import { Button, makeStyles } from "@material-ui/core";
 import Typography from "@material-ui/core/Typography";
 import firebase from "firebase";
 import React, { useEffect, useState } from "react";
-import { Link, Redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 import CheckMark from "../../components/checkMark/CheckMark";
 import LoadingDiv from "../../components/LoadingDiv";
-import { APP_LANDING, SIGNIN_ROUTE } from "../../constants";
+import { SIGNIN_ROUTE } from "../../constants";
 import { Theme } from "../../theme";
 
 const useStyles = makeStyles((theme: Theme) => ({

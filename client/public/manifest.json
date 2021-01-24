@@ -1,6 +1,6 @@
 {
-  "short_name": "New Project Template",
-  "name": "Firebase React Typescript Project Template",
+  "short_name": "FireReactTS Project Template",
+  "name": "Firebase React TypeScript Project Template",
   "icons": [
     {
       "src": "favicon.ico",
