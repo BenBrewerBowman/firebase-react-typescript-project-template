@@ -45,6 +45,7 @@ module.exports = {
     "import/no-unresolved": "off",
     "prefer-destructuring": "off",
     "@typescript-eslint/no-shadow": "off",
+    "no-debugger": "warn",
     "prettier/prettier": [
       "error",
       {

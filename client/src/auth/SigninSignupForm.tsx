@@ -170,15 +170,15 @@ const SigninSignupForm = ({ variant, from }: SigninSignupPageProps) => {
       {/* <Button variant="outlined" className={classes.button}>
                 <MicrosoftLogo className={classes.buttonLogo} />
                 Microsoft {variant}
-              </Button>
-              <Button
-                variant="outlined"
-                onClick={signinWithGithub}
-                className={classes.button}
-              >
-                <GithubLogo className={classes.buttonLogo} />
-                Github {variant}
               </Button> */}
+      {/* <Button
+        variant="outlined"
+        onClick={signinWithGithub}
+        className={classes.button}
+      >
+        <GithubLogo className={classes.buttonLogo} />
+        Github {variant}
+      </Button> */}
       <div className={classes.dividerSection}>
         <Divider className={classes.divider} />
         <Typography

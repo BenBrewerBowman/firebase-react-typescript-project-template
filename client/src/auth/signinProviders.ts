@@ -80,8 +80,3 @@ export const signinWithGoogle = () => {
   const provider = new firebase.auth.GoogleAuthProvider();
   firebase.auth().signInWithRedirect(provider);
 };
-
-export const signinWithGithub = () => {
-  const provider = new firebase.auth.GithubAuthProvider();
-  firebase.auth().signInWithRedirect(provider);
-};
