@@ -50,7 +50,7 @@ const AuthAction = () => {
   }
 
   return (
-    <AuthContainer>
+    <AuthContainer maxWidth="sm">
       <div
         style={{
           padding: 24,
